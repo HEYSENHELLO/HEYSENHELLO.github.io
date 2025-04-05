@@ -1,0 +1,28 @@
+<nav class="navbar">
+    <div class="logo">
+        <a href="/home/"><img class="cumcolor" src="https://static.wikia.nocookie.net/robloxcities/images/d/d2/RobloxLogo.png" alt=""><p>HeYSeNHeLlO's Roblox Services</p></a>
+    </div>
+    <div class="toggle">
+        <a href="#"><img class="cumcolor" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" alt=""></a>
+    </div>
+    <ul>
+        <li class="nav-home"><a href="/home/">Home</a></li>
+        <li class="nav-about"><a href="/about/">About</a></li>
+        <li class="nav-hire"><a href="/hire/">Hire Me</a></li>
+    </ul>
+</nav>
+
+<script>
+    $(function(){
+        $(".toggle").on("click", function(){
+            console.log("clicked");
+            if($(".navbar ul").hasClass("active")){
+                $(".navbar ul").removeClass("active");
+                $(this).find("a").html("<img class=\"cumcolor\"  src=\"https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg\" alt=\"\">")
+            }else{
+                $(".navbar ul").addClass("active");
+                $(this).find("a").html("<img class=\"cumcolor\"  src=\"https://www.svgrepo.com/show/499592/close-x.svg\" alt=\"\">")
+            }
+        });
+    });
+</script>
