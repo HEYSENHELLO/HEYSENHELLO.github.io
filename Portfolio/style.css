@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary: #1C1B22;
+    --primaryVar: #2B2A33;
+    --secondary: #fff;
+    --secondaryVar: #ccc;
+    --accent: #00ff6a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .1s;
+}
+
+body {
+    font-family: "Roboto";
+    color: var(--secondary);
+    background-color: var(--primary);
+    min-width: 550px;        /* Suppose you want minimum width of 1000px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width: 550px;            /* As IE6 ignores !important it will set width as 1000px; */
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+
+    flex-grow: 1;
+}
+.container > * {
+    margin: 5px;
+}
+.container p {
+    max-width: 65ch;
+}
+.container ul {
+    text-align: left;
+}
+.container small {
+    color: var(--secondaryVar);
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background: var(--primary);
+    overflow: hidden;
+}
+.footer > video {
+    display: none;
+    background-size: cover;
+}
+
+.footer a {
+    color: var(--secondary);
+}
+.footer a:hover {
+    color: var(--accent);
+}
+
+.footer img {
+    width: 40px;
+}
+
+.footer span a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.footer span a * {
+    margin-right: 10px;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+}
+.footer li {
+    margin: 0px 5px;
+}
+.footer li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px 100px 100px 40px;
+}
+.footer li a p {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    text-decoration: underline;
+    text-align: center;
+    transition: width .3s;
+    color: var(--accent);
+}
+.footer li a:hover > p {
+    width: 20ch;
+}
+.footer li a:hover {
+    background-color: var(--primaryVar);
+    padding-left: 5px;
+}
+
+.cumcolor {
+    filter: invert(50) brightness(600);
+}
+
+.navbar {
+    background: var(--primaryVar);
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px var(--primaryVar);
+}
+.navbar a {
+    color: var(--secondary);
+}
+.navbar a:hover {
+    color: var(--accent);
+}
+
+.navbar img {
+    width: 40px;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.logo img {
+    width: 40px;
+    filter: none;
+    margin-right: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    padding: 15px 10px;
+    font-size: 16px;
+}
+  
+
+.toggle {
+    font-size: 30px;
+    display: none;
+}
+
+h1 {
+    color: var(--accent);
+}
+
+.gamebox {
+    /*background-color: var(--secondaryVar);
+    padding: 10px;*/
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.gamebox > * {
+    margin: 10px;
+}
+
+.game a:hover > h2{
+    color: var(--accent);
+}
+.game {
+    background-color: var(--primaryVar);
+    border-radius: 35px;
+    padding: 10px;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.game a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.game a > * {
+    margin: 0.25rem;
+}
+.game > *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.gameImages {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.game img {
+    height: 300px;
+    border-radius: 25px;
+}
+.game h2, .game p {
+    color: var(--secondary);
+    text-align: center;
+}
+
+.game iframe {
+    background-color: var(--primary);
+    width: 100%;
+    aspect-ratio: 56.25%;
+    border-radius: 25px;
+}
+
+.game ul {
+    color: var(--secondary);
+}
+.game ul li {
+    max-width: 65ch;
+}
+
+.imageShowcase {
+    width: 100%;
+    display: block !important;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+    }
+
+    .navbar ul {
+        margin-top: 15px;
+        display: none;
+    }
+
+    .navbar ul.active, .toggle{
+        display: block;
+    }
+
+    .toggle{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+}
