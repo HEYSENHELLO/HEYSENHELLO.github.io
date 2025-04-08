@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="navbarParent"></div>
+
+    <div class="container">
+        <small>Website coded by HeYSeNHeLlO.</small>
+        <p>Hi, this is my website mainly dedicated to my portfolio, take a look around!</p>
+        <h1>HOME</h1>
+        <small>Not much to look around in the "Home" page.</small>
+        <ul>
+            <li>To see my experience / past work, don't forget to go to the <a href="/about/">About Page</a></li>
+            <li>If you think my skills are fit for your project, you can learn more on the <a href="/hire/">Hire Page</a></li>
+        </ul>
+
+        <div class="memeVideo">
+            <iframe src="https://www.youtube.com/embed/rvsR9FH3ITk?loop=1&amp;autoplay=1&amp;controls=0" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="sussyText">
+        <p>dont forget to check these stuff out fr ⬇⬇⬆⏬⏫</p>
+    </div>
+    <div id="footerParent"></div>
+    <script>
+        $(document).ready(function(){
+            $("#navbarParent").load("../navbar.html");
+            $("#footerParent").load("../footer.html");
+        });
+    </script>
+</body>
+</html>
